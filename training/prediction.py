@@ -3,11 +3,25 @@ import datetime
 import pickle
 import requests
 
+API_KEY = "3JEF3KYEGWP83K5DWW37CKDJ8"
+
+def _build_url(lat, lon):
+    return (
+        "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/"
+        f"forecast?locations={lat}%2C%20{lon}&aggregateHours=24&unitGroup=us&shortColumnNames=false"
+        f"&contentType=json&key={API_KEY}"
+    )
+
 def get_data(lat, lon):
     
     
-    k = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?locations=" + str(lat) + "%2C%20" + str(lon) + "&aggregateHours=24&unitGroup=us&shortColumnNames=false&contentType=json&key=QG54K69BV36JZ7G6FD46BBY57"
-    x = requests.get(k).json()['locations']
+    k = _build_url(lat, lon)
+    response = requests.get(k)
+    payload = response.json()
+    if 'locations' not in payload:
+        message = payload.get('message', 'Unknown error from Visual Crossing API')
+        raise RuntimeError(f"Visual Crossing API error: {message}")
+    x = payload['locations']
     for i in x:
         y = x[i]['values']
 

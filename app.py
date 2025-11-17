@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import pickle
 import base64
 from training import prediction
-import requests
+from geopy.geocoders import Nominatim
 app = flask.Flask(__name__)
 
 data = [{'name':'Delhi', "sel": "selected"}, {'name':'Mumbai', "sel": ""}, {'name':'Kolkata', "sel": ""}, {'name':'Bangalore', "sel": ""}, {'name':'Chennai', "sel": ""}]
@@ -14,6 +14,7 @@ months = [{"name":"May", "sel": ""}, {"name":"June", "sel": ""}, {"name":"July",
 cities = [{'name':'Delhi', "sel": "selected"}, {'name':'Mumbai', "sel": ""}, {'name':'Kolkata', "sel": ""}, {'name':'Bangalore', "sel": ""}, {'name':'Chennai', "sel": ""}, {'name':'New York', "sel": ""}, {'name':'Los Angeles', "sel": ""}, {'name':'London', "sel": ""}, {'name':'Paris', "sel": ""}, {'name':'Sydney', "sel": ""}, {'name':'Beijing', "sel": ""}]
 
 model = pickle.load(open("model.pickle", 'rb'))
+geolocator = Nominatim(user_agent="floodml-app")
 
 @app.route("/")
 @app.route('/index.html')
@@ -72,15 +73,11 @@ def get_predicts():
             if item['name'] == cityname:
                 item['sel'] = 'selected'
         print(cityname)
-        URL = "https://geocode.search.hereapi.com/v1/geocode"
-        location = cityname
-        api_key = 'Bwv2FJJQHT4FTQBWFC7IEKRE49lNYtrAti6NK7uJVCY' # Acquire from developer.here.com
-        PARAMS = {'apikey':api_key,'q':location} 
-        # sending get request and saving the response as response object 
-        r = requests.get(url = URL, params = PARAMS) 
-        data = r.json()
-        latitude = data['items'][0]['position']['lat']
-        longitude = data['items'][0]['position']['lng']
+        location = geolocator.geocode(cityname)
+        if not location:
+            raise ValueError("Unable to geocode city: {}".format(cityname))
+        latitude = location.latitude
+        longitude = location.longitude
         final = prediction.get_data(latitude, longitude)
 
         final[4] *= 15
@@ -90,7 +87,8 @@ def get_predicts():
             pred = "Unsafe"
         
         return render_template('predicts.html', cityname="Information about " + cityname, cities=cities, temp=round(final[0], 2), maxt=round(final[1], 2), wspd=round(final[2], 2), cloudcover=round(final[3], 2), percip=round(final[4], 2), humidity=round(final[5], 2), pred = pred)
-    except:
+    except Exception as exc:
+        app.logger.exception("Prediction failed for city %s", cityname if 'cityname' in locals() else 'UNKNOWN')
         return render_template('predicts.html', cities=cities, cityname="Oops, we weren't able to retrieve data for that city.")
 
 if __name__ == "__main__":

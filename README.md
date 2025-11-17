@@ -10,6 +10,9 @@ https://floodml.herokuapp.com/
 - run python app.py
 - You're Done!
 
+### API key
+- The predict page uses the bundled Visual Crossing API key defined in `training/prediction.py`. Replace it with your own key if needed.
+
 
 ## Inspiration
 Floods are one of the most dangerous and frequent natural disasters in the world.
