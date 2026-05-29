@@ -1,0 +1,33 @@
+{
+  "feature_columns": [
+    "basin_mean_rainfall",
+    "basin_max_rainfall",
+    "rain_1d_lag",
+    "rain_3d_sum",
+    "rain_7d_sum",
+    "rain_14d_sum",
+    "rain_7d_avg",
+    "rain_max_1d_lag",
+    "rain_max_3d_sum",
+    "rain_max_7d_sum",
+    "rain_max_14d_sum",
+    "rain_max_7d_avg",
+    "soil_moisture",
+    "water_level",
+    "wl_1d_lag",
+    "wl_2d_lag",
+    "wl_3d_lag",
+    "wl_3d_avg",
+    "wl_7d_avg",
+    "distance_to_river_meters"
+  ],
+  "lead_hours": [
+    24,
+    48,
+    72,
+    96,
+    120,
+    144,
+    168
+  ]
+}

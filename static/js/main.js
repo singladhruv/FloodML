@@ -128,5 +128,32 @@
     }
   });
 
+  // Black/White theme toggle (persistent)
+  var THEME_KEY = 'floodml_theme';
+
+  function applyTheme(mode) {
+    if (mode === 'bw') {
+      $('body').addClass('theme-bw');
+    } else {
+      $('body').removeClass('theme-bw');
+    }
+  }
+
+  function syncThemeToggleLabels() {
+    var isBw = $('body').hasClass('theme-bw');
+    $('.js-theme-toggle').text(isBw ? 'Color' : 'B/W');
+  }
+
+  var savedTheme = localStorage.getItem(THEME_KEY) || 'color';
+  applyTheme(savedTheme);
+  syncThemeToggleLabels();
+
+  $(document).on('click', '.js-theme-toggle', function () {
+    var nextTheme = $('body').hasClass('theme-bw') ? 'color' : 'bw';
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_KEY, nextTheme);
+    syncThemeToggleLabels();
+  });
+
 })(jQuery);
 

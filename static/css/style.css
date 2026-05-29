@@ -8,6 +8,182 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+body.theme-bw {
+  background: #000;
+  color: #fff;
+  --surface: #0b0b0b;
+  --surface-soft: #050505;
+  --border: #2f2f2f;
+  --text-main: #ffffff;
+  --text-muted: #d7d7d7;
+  --primary: #f5f5f5;
+  --primary-deep: #bfbfbf;
+}
+
+body.theme-bw #main,
+body.theme-bw .section-bg,
+body.theme-bw #footer .footer-top,
+body.theme-bw #intro {
+  background: #000 !important;
+}
+
+body.theme-bw #header,
+body.theme-bw #topbar,
+body.theme-bw #footer,
+body.theme-bw #why-us,
+body.theme-bw #faq,
+body.theme-bw #about {
+  background: #000 !important;
+}
+
+body.theme-bw #header.header-scrolled,
+body.theme-bw #header.header-pages {
+  background-color: #000 !important;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
+}
+
+body.theme-bw .main-nav > ul > li > a {
+  color: #fff;
+  background: transparent;
+  border-radius: 999px;
+}
+
+body.theme-bw .main-nav > ul > li:hover > a,
+body.theme-bw .main-nav > ul > li.active > a {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+body.theme-bw .main-nav > ul > li > a:after {
+  background: #fff;
+}
+
+body.theme-bw .theme-toggle-btn {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.theme-bw #services .box {
+  background: #fff !important;
+  color: #000;
+}
+
+body.theme-bw #services .title,
+body.theme-bw #services .title a,
+body.theme-bw #services .description,
+body.theme-bw #services .box p,
+body.theme-bw #services .box h4 {
+  color: #000 !important;
+}
+
+body.theme-bw #services .box:hover .title a {
+  color: #222 !important;
+}
+
+body.theme-bw p,
+body.theme-bw span,
+body.theme-bw li,
+body.theme-bw label,
+body.theme-bw small,
+body.theme-bw strong,
+body.theme-bw em,
+body.theme-bw td,
+body.theme-bw th,
+body.theme-bw .section-header p,
+body.theme-bw .about-content h3,
+body.theme-bw .about-content p,
+body.theme-bw .counters p,
+body.theme-bw #faq #faq-list p,
+body.theme-bw #footer .footer-top,
+body.theme-bw #footer .footer-top p,
+body.theme-bw #footer .footer-top .footer-info,
+body.theme-bw #footer .footer-top .footer-links ul a,
+body.theme-bw #footer .footer-top .footer-contact p,
+body.theme-bw #footer .copyright,
+body.theme-bw #footer .credits {
+  color: #fff !important;
+}
+
+body.theme-bw #topbar .social-links a {
+  color: #fff !important;
+}
+
+body.theme-bw #intro .intro-info h2 {
+  color: #fff !important;
+}
+
+body.theme-bw h1,
+body.theme-bw h2,
+body.theme-bw h3,
+body.theme-bw h4,
+body.theme-bw h5,
+body.theme-bw h6 {
+  color: #fff !important;
+}
+
+body.theme-bw a {
+  color: #fff !important;
+}
+
+body.theme-bw a:hover,
+body.theme-bw a:active,
+body.theme-bw a:focus,
+body.theme-bw #faq #faq-list a,
+body.theme-bw #faq #faq-list a.collapsed,
+body.theme-bw #faq #faq-list a:hover {
+  color: #fff !important;
+}
+
+body.theme-bw #faq #faq-list a i,
+body.theme-bw .back-to-top,
+body.theme-bw #why-us .counters span {
+  color: #fff !important;
+}
+
+body.theme-bw hr {
+  border-color: #2f2f2f;
+}
+
+body.theme-bw .predict-shell,
+body.theme-bw .result-card,
+body.theme-bw .metric-card {
+  background: #0b0b0b !important;
+  border-color: #2f2f2f !important;
+  box-shadow: none !important;
+}
+
+body.theme-bw .predict-form select,
+body.theme-bw .form-control,
+body.theme-bw input,
+body.theme-bw textarea {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #2f2f2f !important;
+}
+
+body.theme-bw .predict-form select option {
+  background: #111;
+  color: #fff;
+}
+
+body.theme-bw input::placeholder,
+body.theme-bw textarea::placeholder {
+  color: #bdbdbd !important;
+}
+
+body.theme-bw .predict-btn,
+body.theme-bw #footer .form button[type="submit"] {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+}
+
+body.theme-bw .hydrology-table th,
+body.theme-bw .hydrology-table td {
+  border-bottom-color: #2f2f2f !important;
+}
+
 a {
   color: #1bb1dc;
   transition: 0.5s;
@@ -350,6 +526,28 @@ h6 {
   content: "\f105";
   position: absolute;
   right: 15px;
+}
+
+.theme-toggle-item {
+  margin-left: 6px;
+}
+
+.theme-toggle-btn {
+  border: 1px solid #cfe4ef;
+  background: #ffffff;
+  color: #214055;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: #1bb1dc;
+  color: #0a98c0;
 }
 
 /* Mobile Navigation */

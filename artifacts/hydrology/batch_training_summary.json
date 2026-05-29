@@ -1,0 +1,1465 @@
+{
+  "jalandhar": {
+    "model_bundle": "artifacts\\hydrology\\jalandhar_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\jalandhar_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\jalandhar_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9915824915824917,
+        "test_metrics": {
+          "threshold": 0.43999999999999995,
+          "accuracy": 0.9619047619047619,
+          "precision": 0.7777777777777778,
+          "recall": 0.7777777777777778,
+          "f1": 0.7777777777777778,
+          "roc_auc": 0.9907407407407407,
+          "pr_auc": 0.9216200466200468
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9898989898989898,
+        "test_metrics": {
+          "threshold": 0.27999999999999997,
+          "accuracy": 0.9428571428571428,
+          "precision": 0.6363636363636364,
+          "recall": 0.7777777777777778,
+          "f1": 0.7,
+          "roc_auc": 0.9733796296296295,
+          "pr_auc": 0.7343152218152218
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9612794612794613,
+        "test_metrics": {
+          "threshold": 0.21999999999999997,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.5384615384615384,
+          "recall": 0.7777777777777778,
+          "f1": 0.6363636363636364,
+          "roc_auc": 0.9652777777777777,
+          "pr_auc": 0.6016806722689076
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9540816326530612,
+        "test_metrics": {
+          "threshold": 0.33999999999999997,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.625,
+          "recall": 0.5555555555555556,
+          "f1": 0.5882352941176471,
+          "roc_auc": 0.9641203703703703,
+          "pr_auc": 0.6935045948203844
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9727891156462586,
+        "test_metrics": {
+          "threshold": 0.16999999999999998,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.5454545454545454,
+          "recall": 0.6666666666666666,
+          "f1": 0.6,
+          "roc_auc": 0.960648148148148,
+          "pr_auc": 0.6542179498061851
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.977891156462585,
+        "test_metrics": {
+          "threshold": 0.3499999999999999,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.5714285714285714,
+          "recall": 0.4444444444444444,
+          "f1": 0.5,
+          "roc_auc": 0.9583333333333333,
+          "pr_auc": 0.6944684944684945
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9710884353741497,
+        "test_metrics": {
+          "threshold": 0.4499999999999999,
+          "accuracy": 0.9423076923076923,
+          "precision": 0.7142857142857143,
+          "recall": 0.5555555555555556,
+          "f1": 0.625,
+          "roc_auc": 0.9660818713450292,
+          "pr_auc": 0.7177910052910053
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "delhi": {
+    "model_bundle": "artifacts\\hydrology\\delhi_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\delhi_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\delhi_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "logistic",
+        "validation_auc": 0.990979381443299,
+        "test_metrics": {
+          "threshold": 0.5599999999999999,
+          "accuracy": 0.9809523809523809,
+          "precision": 0.9,
+          "recall": 0.9,
+          "f1": 0.9,
+          "roc_auc": 0.9968421052631579,
+          "pr_auc": 0.9769230769230769
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9819587628865979,
+        "test_metrics": {
+          "threshold": 0.6699999999999999,
+          "accuracy": 0.9714285714285714,
+          "precision": 1.0,
+          "recall": 0.7,
+          "f1": 0.8235294117647058,
+          "roc_auc": 0.9894736842105264,
+          "pr_auc": 0.9216666666666666
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "logistic",
+        "validation_auc": 0.981958762886598,
+        "test_metrics": {
+          "threshold": 0.37999999999999995,
+          "accuracy": 0.9619047619047619,
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8,
+          "roc_auc": 0.988421052631579,
+          "pr_auc": 0.9027625152625153
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9817708333333334,
+        "test_metrics": {
+          "threshold": 0.58,
+          "accuracy": 0.9619047619047619,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "roc_auc": 0.9873684210526316,
+          "pr_auc": 0.9225
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.96484375,
+        "test_metrics": {
+          "threshold": 0.30999999999999994,
+          "accuracy": 0.9428571428571428,
+          "precision": 0.7,
+          "recall": 0.7,
+          "f1": 0.7,
+          "roc_auc": 0.9810526315789474,
+          "pr_auc": 0.8828463203463203
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9622395833333334,
+        "test_metrics": {
+          "threshold": 0.36999999999999994,
+          "accuracy": 0.9142857142857143,
+          "precision": 0.5454545454545454,
+          "recall": 0.6,
+          "f1": 0.5714285714285714,
+          "roc_auc": 0.96,
+          "pr_auc": 0.6690601503759397
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.96875,
+        "test_metrics": {
+          "threshold": 0.35999999999999993,
+          "accuracy": 0.9326923076923077,
+          "precision": 0.6363636363636364,
+          "recall": 0.7,
+          "f1": 0.6666666666666666,
+          "roc_auc": 0.9648936170212765,
+          "pr_auc": 0.7195616883116882
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "mumbai": {
+    "model_bundle": "artifacts\\hydrology\\mumbai_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\mumbai_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\mumbai_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9960753532182104,
+        "test_metrics": {
+          "threshold": 0.31999999999999995,
+          "accuracy": 0.9809523809523809,
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333333333333333,
+          "roc_auc": 0.9960753532182103,
+          "pr_auc": 0.9745225013082156
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9984301412872841,
+        "test_metrics": {
+          "threshold": 0.21999999999999997,
+          "accuracy": 0.9619047619047619,
+          "precision": 0.8125,
+          "recall": 0.9285714285714286,
+          "f1": 0.8666666666666667,
+          "roc_auc": 0.9929356357927787,
+          "pr_auc": 0.9605300453514739
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9937205651491366,
+        "test_metrics": {
+          "threshold": 0.25999999999999995,
+          "accuracy": 0.9523809523809523,
+          "precision": 0.7647058823529411,
+          "recall": 0.9285714285714286,
+          "f1": 0.8387096774193549,
+          "roc_auc": 0.9827315541601256,
+          "pr_auc": 0.8712946600551643
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9936507936507937,
+        "test_metrics": {
+          "threshold": 0.30999999999999994,
+          "accuracy": 0.9428571428571428,
+          "precision": 0.7222222222222222,
+          "recall": 0.9285714285714286,
+          "f1": 0.8125,
+          "roc_auc": 0.9843014128728415,
+          "pr_auc": 0.8651617075489255
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9865079365079366,
+        "test_metrics": {
+          "threshold": 0.41999999999999993,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.7333333333333333,
+          "recall": 0.7857142857142857,
+          "f1": 0.7586206896551724,
+          "roc_auc": 0.978021978021978,
+          "pr_auc": 0.8373265577640806
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9682539682539683,
+        "test_metrics": {
+          "threshold": 0.41999999999999993,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143,
+          "roc_auc": 0.9709576138147566,
+          "pr_auc": 0.8312387147014476
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9563492063492063,
+        "test_metrics": {
+          "threshold": 0.3,
+          "accuracy": 0.9134615384615384,
+          "precision": 0.631578947368421,
+          "recall": 0.8571428571428571,
+          "f1": 0.7272727272727273,
+          "roc_auc": 0.9595238095238096,
+          "pr_auc": 0.7906416373359593
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "kolkata": {
+    "model_bundle": "artifacts\\hydrology\\kolkata_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\kolkata_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\kolkata_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9991638795986622,
+        "test_metrics": {
+          "threshold": 0.4099999999999999,
+          "accuracy": 0.9904761904761905,
+          "precision": 1.0,
+          "recall": 0.9285714285714286,
+          "f1": 0.9629629629629629,
+          "roc_auc": 0.9992150706436421,
+          "pr_auc": 0.9952380952380953
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9916387959866221,
+        "test_metrics": {
+          "threshold": 0.27999999999999997,
+          "accuracy": 0.9714285714285714,
+          "precision": 0.8235294117647058,
+          "recall": 1.0,
+          "f1": 0.9032258064516129,
+          "roc_auc": 0.9960753532182103,
+          "pr_auc": 0.9745225013082156
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9824414715719064,
+        "test_metrics": {
+          "threshold": 0.49999999999999994,
+          "accuracy": 0.9619047619047619,
+          "precision": 0.9166666666666666,
+          "recall": 0.7857142857142857,
+          "f1": 0.8461538461538461,
+          "roc_auc": 0.989010989010989,
+          "pr_auc": 0.9313182848897135
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9661876584953508,
+        "test_metrics": {
+          "threshold": 0.13999999999999999,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "roc_auc": 0.9905808477237049,
+          "pr_auc": 0.9422370113546584
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.962806424344886,
+        "test_metrics": {
+          "threshold": 0.4099999999999999,
+          "accuracy": 0.9523809523809523,
+          "precision": 0.8,
+          "recall": 0.8571428571428571,
+          "f1": 0.8275862068965517,
+          "roc_auc": 0.9850863422291994,
+          "pr_auc": 0.9167222658294087
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "logistic",
+        "validation_auc": 0.911242603550296,
+        "test_metrics": {
+          "threshold": 0.19,
+          "accuracy": 0.8571428571428571,
+          "precision": 0.48,
+          "recall": 0.8571428571428571,
+          "f1": 0.6153846153846154,
+          "roc_auc": 0.9646781789638932,
+          "pr_auc": 0.8516955266955266
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.874894336432798,
+        "test_metrics": {
+          "threshold": 0.41999999999999993,
+          "accuracy": 0.9038461538461539,
+          "precision": 0.75,
+          "recall": 0.42857142857142855,
+          "f1": 0.5454545454545454,
+          "roc_auc": 0.9484126984126984,
+          "pr_auc": 0.6672076364506095
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "bengaluru": {
+    "model_bundle": "artifacts\\hydrology\\bengaluru_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\bengaluru_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\bengaluru_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9976452119309263,
+        "test_metrics": {
+          "threshold": 0.36999999999999994,
+          "accuracy": 0.9523809523809523,
+          "precision": 0.7857142857142857,
+          "recall": 0.8461538461538461,
+          "f1": 0.8148148148148148,
+          "roc_auc": 0.9908026755852842,
+          "pr_auc": 0.9378451676528599
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.999215070643642,
+        "test_metrics": {
+          "threshold": 0.14999999999999997,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.7142857142857143,
+          "recall": 0.7692307692307693,
+          "f1": 0.7407407407407407,
+          "roc_auc": 0.9715719063545151,
+          "pr_auc": 0.7969978461643143
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "random_forest",
+        "validation_auc": 1.0,
+        "test_metrics": {
+          "threshold": 0.08,
+          "accuracy": 0.9047619047619048,
+          "precision": 0.6153846153846154,
+          "recall": 0.6153846153846154,
+          "f1": 0.6153846153846154,
+          "roc_auc": 0.951505016722408,
+          "pr_auc": 0.5785111480961683
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9984126984126985,
+        "test_metrics": {
+          "threshold": 0.26999999999999996,
+          "accuracy": 0.8666666666666667,
+          "precision": 0.45454545454545453,
+          "recall": 0.38461538461538464,
+          "f1": 0.4166666666666667,
+          "roc_auc": 0.9381270903010033,
+          "pr_auc": 0.5114455607370586
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9857142857142857,
+        "test_metrics": {
+          "threshold": 0.19,
+          "accuracy": 0.9047619047619048,
+          "precision": 0.6,
+          "recall": 0.6923076923076923,
+          "f1": 0.6428571428571429,
+          "roc_auc": 0.9364548494983278,
+          "pr_auc": 0.6870580365261216
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9738095238095238,
+        "test_metrics": {
+          "threshold": 0.16999999999999998,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.6666666666666666,
+          "recall": 0.7692307692307693,
+          "f1": 0.7142857142857143,
+          "roc_auc": 0.8979933110367893,
+          "pr_auc": 0.5996386086167946
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9515873015873015,
+        "test_metrics": {
+          "threshold": 0.41999999999999993,
+          "accuracy": 0.8269230769230769,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.863905325443787,
+          "pr_auc": 0.3507354462403931
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "chennai": {
+    "model_bundle": "artifacts\\hydrology\\chennai_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\chennai_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\chennai_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9976452119309263,
+        "test_metrics": {
+          "threshold": 0.18,
+          "accuracy": 0.9714285714285714,
+          "precision": 0.8571428571428571,
+          "recall": 0.9230769230769231,
+          "f1": 0.8888888888888888,
+          "roc_auc": 0.9933110367892977,
+          "pr_auc": 0.9590771219730494
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9984301412872841,
+        "test_metrics": {
+          "threshold": 0.21999999999999997,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6875,
+          "recall": 0.8461538461538461,
+          "f1": 0.7586206896551724,
+          "roc_auc": 0.9782608695652174,
+          "pr_auc": 0.8855186480186479
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9968602825745683,
+        "test_metrics": {
+          "threshold": 0.24,
+          "accuracy": 0.9714285714285714,
+          "precision": 0.8125,
+          "recall": 1.0,
+          "f1": 0.896551724137931,
+          "roc_auc": 0.9874581939799331,
+          "pr_auc": 0.9167265426880811
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9928571428571429,
+        "test_metrics": {
+          "threshold": 0.21999999999999997,
+          "accuracy": 0.9428571428571428,
+          "precision": 0.7333333333333333,
+          "recall": 0.8461538461538461,
+          "f1": 0.7857142857142857,
+          "roc_auc": 0.979933110367893,
+          "pr_auc": 0.8908475582388626
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9833333333333334,
+        "test_metrics": {
+          "threshold": 0.24999999999999994,
+          "accuracy": 0.8380952380952381,
+          "precision": 0.4090909090909091,
+          "recall": 0.6923076923076923,
+          "f1": 0.5142857142857142,
+          "roc_auc": 0.8988294314381271,
+          "pr_auc": 0.42960535532223376
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9817460317460318,
+        "test_metrics": {
+          "threshold": 0.29,
+          "accuracy": 0.8380952380952381,
+          "precision": 0.4090909090909091,
+          "recall": 0.6923076923076923,
+          "f1": 0.5142857142857142,
+          "roc_auc": 0.8971571906354514,
+          "pr_auc": 0.4226470160157163
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9777777777777777,
+        "test_metrics": {
+          "threshold": 0.3,
+          "accuracy": 0.8557692307692307,
+          "precision": 0.45,
+          "recall": 0.6923076923076923,
+          "f1": 0.5454545454545454,
+          "roc_auc": 0.9103972950126796,
+          "pr_auc": 0.4872287945223229
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "hyderabad": {
+    "model_bundle": "artifacts\\hydrology\\hyderabad_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\hyderabad_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\hyderabad_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9966555183946488,
+        "test_metrics": {
+          "threshold": 0.5299999999999999,
+          "accuracy": 0.9904761904761905,
+          "precision": 1.0,
+          "recall": 0.9230769230769231,
+          "f1": 0.96,
+          "roc_auc": 0.9991638795986623,
+          "pr_auc": 0.9945054945054943
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9941471571906355,
+        "test_metrics": {
+          "threshold": 0.27999999999999997,
+          "accuracy": 0.9714285714285714,
+          "precision": 0.8125,
+          "recall": 1.0,
+          "f1": 0.896551724137931,
+          "roc_auc": 1.0,
+          "pr_auc": 1.0
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9891304347826086,
+        "test_metrics": {
+          "threshold": 0.33999999999999997,
+          "accuracy": 0.9523809523809523,
+          "precision": 0.7857142857142857,
+          "recall": 0.8461538461538461,
+          "f1": 0.8148148148148148,
+          "roc_auc": 0.9899665551839465,
+          "pr_auc": 0.9367282290359213
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9797125950972104,
+        "test_metrics": {
+          "threshold": 0.22999999999999998,
+          "accuracy": 0.9523809523809523,
+          "precision": 0.75,
+          "recall": 0.9230769230769231,
+          "f1": 0.8275862068965517,
+          "roc_auc": 0.9899665551839465,
+          "pr_auc": 0.9391931597813952
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9585798816568047,
+        "test_metrics": {
+          "threshold": 0.29,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.6666666666666666,
+          "recall": 0.7692307692307693,
+          "f1": 0.7142857142857143,
+          "roc_auc": 0.9782608695652174,
+          "pr_auc": 0.8257119514472455
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9459002535925612,
+        "test_metrics": {
+          "threshold": 0.35999999999999993,
+          "accuracy": 0.9142857142857143,
+          "precision": 0.6428571428571429,
+          "recall": 0.6923076923076923,
+          "f1": 0.6666666666666666,
+          "roc_auc": 0.9732441471571907,
+          "pr_auc": 0.8206941060447848
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9526627218934911,
+        "test_metrics": {
+          "threshold": 0.59,
+          "accuracy": 0.9230769230769231,
+          "precision": 1.0,
+          "recall": 0.38461538461538464,
+          "f1": 0.5555555555555556,
+          "roc_auc": 0.970414201183432,
+          "pr_auc": 0.8209276018099547
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "ahmedabad": {
+    "model_bundle": "artifacts\\hydrology\\ahmedabad_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\ahmedabad_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\ahmedabad_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9991039426523297,
+        "test_metrics": {
+          "threshold": 0.32999999999999996,
+          "accuracy": 0.9619047619047619,
+          "precision": 0.7333333333333333,
+          "recall": 1.0,
+          "f1": 0.8461538461538461,
+          "roc_auc": 0.9990328820116054,
+          "pr_auc": 0.9924242424242425
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9946236559139785,
+        "test_metrics": {
+          "threshold": 0.26999999999999996,
+          "accuracy": 0.9619047619047619,
+          "precision": 0.7333333333333333,
+          "recall": 1.0,
+          "f1": 0.8461538461538461,
+          "roc_auc": 0.9932301740812379,
+          "pr_auc": 0.9504495504495505
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "logistic",
+        "validation_auc": 0.989247311827957,
+        "test_metrics": {
+          "threshold": 0.18,
+          "accuracy": 0.9428571428571428,
+          "precision": 0.6470588235294118,
+          "recall": 1.0,
+          "f1": 0.7857142857142857,
+          "roc_auc": 0.9845261121856866,
+          "pr_auc": 0.815997890997891
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.967391304347826,
+        "test_metrics": {
+          "threshold": 0.6399999999999999,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6666666666666666,
+          "recall": 0.7272727272727273,
+          "f1": 0.6956521739130435,
+          "roc_auc": 0.9632495164410058,
+          "pr_auc": 0.5938041756223573
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9510869565217391,
+        "test_metrics": {
+          "threshold": 0.18,
+          "accuracy": 0.9047619047619048,
+          "precision": 0.5263157894736842,
+          "recall": 0.9090909090909091,
+          "f1": 0.6666666666666666,
+          "roc_auc": 0.9468085106382979,
+          "pr_auc": 0.5307636807636809
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9365942028985508,
+        "test_metrics": {
+          "threshold": 0.3,
+          "accuracy": 0.8952380952380953,
+          "precision": 0.5,
+          "recall": 0.8181818181818182,
+          "f1": 0.6206896551724138,
+          "roc_auc": 0.9264990328820116,
+          "pr_auc": 0.43577003804276526
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.933876811594203,
+        "test_metrics": {
+          "threshold": 0.37999999999999995,
+          "accuracy": 0.9230769230769231,
+          "precision": 0.5882352941176471,
+          "recall": 0.9090909090909091,
+          "f1": 0.7142857142857143,
+          "roc_auc": 0.9775171065493646,
+          "pr_auc": 0.7565951725042634
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "pune": {
+    "model_bundle": "artifacts\\hydrology\\pune_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\pune_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\pune_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "logistic",
+        "validation_auc": 1.0,
+        "test_metrics": {
+          "threshold": 0.37999999999999995,
+          "accuracy": 0.9714285714285714,
+          "precision": 0.8461538461538461,
+          "recall": 0.9166666666666666,
+          "f1": 0.88,
+          "roc_auc": 0.9937275985663083,
+          "pr_auc": 0.9512205387205387
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9966555183946488,
+        "test_metrics": {
+          "threshold": 0.4599999999999999,
+          "accuracy": 0.9619047619047619,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "roc_auc": 0.9865591397849462,
+          "pr_auc": 0.8844287656787658
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9983277591973244,
+        "test_metrics": {
+          "threshold": 0.35999999999999993,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6470588235294118,
+          "recall": 0.9166666666666666,
+          "f1": 0.7586206896551724,
+          "roc_auc": 0.9650537634408602,
+          "pr_auc": 0.7348288557847381
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9957734573119189,
+        "test_metrics": {
+          "threshold": 0.3999999999999999,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "roc_auc": 0.9686379928315412,
+          "pr_auc": 0.6900245587745588
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9864750633981403,
+        "test_metrics": {
+          "threshold": 0.3,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6666666666666666,
+          "recall": 0.8333333333333334,
+          "f1": 0.7407407407407407,
+          "roc_auc": 0.960573476702509,
+          "pr_auc": 0.6405944205576559
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9729501267962806,
+        "test_metrics": {
+          "threshold": 0.3999999999999999,
+          "accuracy": 0.8761904761904762,
+          "precision": 0.46153846153846156,
+          "recall": 0.5,
+          "f1": 0.48,
+          "roc_auc": 0.9130824372759856,
+          "pr_auc": 0.41435619935619933
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9687235841081996,
+        "test_metrics": {
+          "threshold": 0.4499999999999999,
+          "accuracy": 0.8653846153846154,
+          "precision": 0.4,
+          "recall": 0.3333333333333333,
+          "f1": 0.36363636363636365,
+          "roc_auc": 0.9094202898550725,
+          "pr_auc": 0.411512284012284
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "lucknow": {
+    "model_bundle": "artifacts\\hydrology\\lucknow_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\lucknow_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\lucknow_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9985185185185187,
+        "test_metrics": {
+          "threshold": 0.38999999999999996,
+          "accuracy": 0.9714285714285714,
+          "precision": 0.8461538461538461,
+          "recall": 0.9166666666666666,
+          "f1": 0.88,
+          "roc_auc": 0.9973118279569892,
+          "pr_auc": 0.9811507936507938
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9940740740740741,
+        "test_metrics": {
+          "threshold": 0.3499999999999999,
+          "accuracy": 0.9714285714285714,
+          "precision": 0.8461538461538461,
+          "recall": 0.9166666666666666,
+          "f1": 0.88,
+          "roc_auc": 0.9964157706093191,
+          "pr_auc": 0.9752747252747251
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9896296296296296,
+        "test_metrics": {
+          "threshold": 0.4699999999999999,
+          "accuracy": 0.9523809523809523,
+          "precision": 0.8181818181818182,
+          "recall": 0.75,
+          "f1": 0.782608695652174,
+          "roc_auc": 0.9820788530465949,
+          "pr_auc": 0.9115023935995804
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9820224719101124,
+        "test_metrics": {
+          "threshold": 0.4599999999999999,
+          "accuracy": 0.9428571428571428,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "roc_auc": 0.9758064516129032,
+          "pr_auc": 0.8240517584267585
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9685393258426966,
+        "test_metrics": {
+          "threshold": 0.29,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6666666666666666,
+          "recall": 0.8333333333333334,
+          "f1": 0.7407407407407407,
+          "roc_auc": 0.9318996415770608,
+          "pr_auc": 0.7447007176155552
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9535580524344569,
+        "test_metrics": {
+          "threshold": 0.32999999999999996,
+          "accuracy": 0.9238095238095239,
+          "precision": 0.6111111111111112,
+          "recall": 0.9166666666666666,
+          "f1": 0.7333333333333333,
+          "roc_auc": 0.9784946236559139,
+          "pr_auc": 0.8527324312541033
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9393258426966291,
+        "test_metrics": {
+          "threshold": 0.32999999999999996,
+          "accuracy": 0.9615384615384616,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "roc_auc": 0.990036231884058,
+          "pr_auc": 0.9108435545935546
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  },
+  "jaipur": {
+    "model_bundle": "artifacts\\hydrology\\jaipur_hydrology_model_bundle.pkl",
+    "metrics_json": "artifacts\\hydrology\\jaipur_hydrology_metrics.json",
+    "latest_feature_row": "artifacts\\hydrology\\jaipur_latest_feature_row.parquet",
+    "results_by_lead": {
+      "24": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9893617021276596,
+        "test_metrics": {
+          "threshold": 0.3999999999999999,
+          "accuracy": 0.9809523809523809,
+          "precision": 0.9230769230769231,
+          "recall": 0.9230769230769231,
+          "f1": 0.9230769230769231,
+          "roc_auc": 0.9974916387959866,
+          "pr_auc": 0.9821780783319245
+        },
+        "split_sizes": {
+          "train": 489,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "48": {
+        "selected_model": "random_forest",
+        "validation_auc": 0.9806576402321083,
+        "test_metrics": {
+          "threshold": 0.57,
+          "accuracy": 0.9809523809523809,
+          "precision": 0.9230769230769231,
+          "recall": 0.9230769230769231,
+          "f1": 0.9230769230769231,
+          "roc_auc": 0.9949832775919731,
+          "pr_auc": 0.9727153188691651
+        },
+        "split_sizes": {
+          "train": 488,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "72": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9748549323017408,
+        "test_metrics": {
+          "threshold": 0.31999999999999995,
+          "accuracy": 0.9523809523809523,
+          "precision": 0.7857142857142857,
+          "recall": 0.8461538461538461,
+          "f1": 0.8148148148148148,
+          "roc_auc": 0.9816053511705686,
+          "pr_auc": 0.8554279054279055
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 105,
+          "test": 105
+        }
+      },
+      "96": {
+        "selected_model": "logistic",
+        "validation_auc": 0.970674486803519,
+        "test_metrics": {
+          "threshold": 0.25999999999999995,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6875,
+          "recall": 0.8461538461538461,
+          "f1": 0.7586206896551724,
+          "roc_auc": 0.9607023411371238,
+          "pr_auc": 0.611368709219388
+        },
+        "split_sizes": {
+          "train": 487,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "120": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9511241446725317,
+        "test_metrics": {
+          "threshold": 0.20999999999999996,
+          "accuracy": 0.9333333333333333,
+          "precision": 0.6666666666666666,
+          "recall": 0.9230769230769231,
+          "f1": 0.7741935483870968,
+          "roc_auc": 0.9364548494983278,
+          "pr_auc": 0.5092868209384047
+        },
+        "split_sizes": {
+          "train": 486,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "144": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9413489736070381,
+        "test_metrics": {
+          "threshold": 0.35999999999999993,
+          "accuracy": 0.9047619047619048,
+          "precision": 0.6,
+          "recall": 0.6923076923076923,
+          "f1": 0.6428571428571429,
+          "roc_auc": 0.9381270903010033,
+          "pr_auc": 0.5159232775903412
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 105
+        }
+      },
+      "168": {
+        "selected_model": "logistic",
+        "validation_auc": 0.9257086999022482,
+        "test_metrics": {
+          "threshold": 0.22999999999999998,
+          "accuracy": 0.9038461538461539,
+          "precision": 0.5882352941176471,
+          "recall": 0.7692307692307693,
+          "f1": 0.6666666666666666,
+          "roc_auc": 0.9289940828402368,
+          "pr_auc": 0.4859849489374376
+        },
+        "split_sizes": {
+          "train": 485,
+          "val": 104,
+          "test": 104
+        }
+      }
+    }
+  }
+}

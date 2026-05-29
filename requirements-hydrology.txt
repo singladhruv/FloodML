@@ -1,0 +1,11 @@
+# Optional stack for hydrology-grade pipeline (heavy geospatial + forecast tooling)
+imdlib==0.1.20
+herbie-data==2025.2.1
+xarray==2025.1.2
+rioxarray==0.18.2
+geopandas==1.0.1
+shapely==2.0.7
+pyproj==3.7.0
+fiona==1.10.1
+earthengine-api==1.5.0
+pyarrow==19.0.1

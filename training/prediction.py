@@ -26,6 +26,9 @@ def get_data(lat, lon):
         y = x[i]['values']
 
     final = [0, 0, 0, 0, 0, 0]
+    if not y:
+        raise RuntimeError("No forecast values returned from Visual Crossing API")
+    count = len(y)
 
     for j in y:
         final[0] += j['temp']
@@ -35,10 +38,10 @@ def get_data(lat, lon):
         final[3] += j['cloudcover']
         final[4] += j['precip']
         final[5] += j['humidity']
-    final[0] /= 15
-    final[2] /= 15
-    final[3] /= 15
-    final[5] /= 15
+    final[0] /= count
+    final[2] /= count
+    final[3] /= count
+    final[5] /= count
 
     return final
 

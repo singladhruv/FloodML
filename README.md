@@ -72,3 +72,66 @@ We would like to expand our web application to cover cities in countries all aro
 Our team also believes further scientific analysis of satellite data could help critically in flood detection. Thus, we would like to expand to create an image classification model to detect signs of upcoming floods from satellite images.
 
 Most importantly, our team is proud to have created a web application that could potentially help people and governments prepare for and reallocate resources for floods, potentially saving thousands of lives and millions of livelihoods.
+
+## Reproducible setup and training
+To avoid binary compatibility issues between `numpy` and `scikit-learn`, use a clean virtual environment and pinned dependencies.
+
+1. Create and activate a virtual environment.
+2. Install dependencies: `pip install -r requirements.txt`
+3. Retrain the model bundle (recommended):
+   - `cd training`
+   - `python train.py`
+4. Return to project root and run the app: `python app.py`
+
+The training script now saves:
+- `training/model_bundle.pkl` (calibrated model + threshold + metadata)
+- `training/model.pickle` (backward-compatible model object)
+
+## Hydrology Pipeline (Pilot)
+This repository now includes a basin-level hydrology pipeline under `hydrology/` that supports:
+- IMD rainfall ingestion (historical baseline)
+- ECMWF ingestion via Herbie (operational forecast source)
+- Soil moisture ingestion from Earth Engine (SMAP)
+- CWC gauge-based flood target creation
+- Leakage-safe lag/rolling feature engineering
+- Time-based training and calibration for 24h/48h/72h lead horizons
+
+### Install
+1. Install base dependencies:
+   - `pip install -r requirements.txt`
+2. Install hydrology dependencies:
+   - `pip install -r requirements-hydrology.txt`
+3. Authenticate Earth Engine once on your machine before training:
+   - `earthengine authenticate`
+
+### Train Hydrology Model
+Run from project root:
+
+```bash
+python -m hydrology.train_hydrology ^
+  --basin-id jalandhar ^
+  --basin-shapefile data/basins/jalandhar_basin.shp ^
+  --river-shapefile data/hydrorivers/HydroRIVERS_v10_as.shp ^
+  --cwc-gauge-csv data/cwc/jalandhar_cwc.csv ^
+  --cwc-danger-level 212.0 ^
+  --target-lat 31.3 ^
+  --target-lon 75.5 ^
+  --start-year 2010 ^
+  --end-year 2020 ^
+  --lead-hours 24 48 72
+```
+
+Artifacts are saved to `artifacts/hydrology/`:
+- `*_hydrology_model_bundle.pkl`
+- `*_hydrology_metrics.json`
+- `dataset_lead_24h.parquet` / `48h` / `72h`
+
+### Run Inference
+Use one row of engineered features (parquet) and model bundle:
+
+```bash
+python -m hydrology.infer_hydrology ^
+  --model-bundle artifacts/hydrology/jalandhar_hydrology_model_bundle.pkl ^
+  --lead-hours 24 ^
+  --feature-row-parquet artifacts/hydrology/latest_feature_row.parquet
+```

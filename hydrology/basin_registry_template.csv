@@ -1,0 +1,11 @@
+basin_id,basin_shapefile,river_shapefile,cwc_gauge_csv,cwc_danger_level,target_lat,target_lon
+delhi,data/basins/delhi_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/delhi_cwc.csv,211.0,28.6139,77.2090
+mumbai,data/basins/mumbai_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/mumbai_cwc.csv,10.0,19.0760,72.8777
+kolkata,data/basins/kolkata_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/kolkata_cwc.csv,11.0,22.5726,88.3639
+bengaluru,data/basins/bengaluru_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/bengaluru_cwc.csv,855.0,12.9716,77.5946
+chennai,data/basins/chennai_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/chennai_cwc.csv,10.0,13.0827,80.2707
+hyderabad,data/basins/hyderabad_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/hyderabad_cwc.csv,505.0,17.3850,78.4867
+ahmedabad,data/basins/ahmedabad_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/ahmedabad_cwc.csv,55.0,23.0225,72.5714
+pune,data/basins/pune_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/pune_cwc.csv,555.0,18.5204,73.8567
+lucknow,data/basins/lucknow_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/lucknow_cwc.csv,125.0,26.8467,80.9462
+jaipur,data/basins/jaipur_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/jaipur_cwc.csv,405.0,26.9124,75.7873

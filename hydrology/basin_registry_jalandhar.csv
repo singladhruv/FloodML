@@ -1,0 +1,2 @@
+basin_id,basin_shapefile,river_shapefile,cwc_gauge_csv,cwc_danger_level,target_lat,target_lon
+jalandhar,data/basins/jalandhar_basin.shp,data/hydrorivers/HydroRIVERS_v10_as.shp,data/cwc/jalandhar_cwc.csv,212.0,31.3,75.5

@@ -54,30 +54,131 @@
     />
 
     <style>
-      input[type="text"],
-      select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+      :root {
+        --primary: #1bb1dc;
+        --primary-deep: #0e7490;
+        --surface: #ffffff;
+        --surface-soft: #f3f8fb;
+        --border: #dce8ee;
+        --text-main: #123047;
+        --text-muted: #4f687b;
+        --ok: #188742;
+        --danger: #e11d48;
       }
 
-      input[type="submit"] {
-        width: 100%;
-        background-color: #4caf50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+      #main {
+        background: linear-gradient(180deg, #eef7fb 0%, #f9fcff 36%, #f5f8fd 100%);
       }
 
-      input[type="submit"]:hover {
-        background-color: #45a049;
+      .predict-shell {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--surface);
+        padding: 24px;
+        box-shadow: 0 10px 28px rgba(16, 68, 107, 0.08);
+      }
+
+      .predict-form {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .predict-form select {
+        min-width: 240px;
+        height: 50px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        color: var(--text-main);
+      }
+
+      .predict-btn {
+        height: 50px;
+        min-width: 120px;
+        border-radius: 10px;
+        border: 0;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%);
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .predict-title {
+        color: var(--text-main);
+        margin-bottom: 4px;
+      }
+
+      .predict-subtitle {
+        color: var(--text-muted);
+      }
+
+      .result-card {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
+      }
+
+      .result-label {
+        font-size: 42px;
+        line-height: 1;
+        font-weight: 800;
+        margin: 10px 0 12px;
+      }
+
+      .result-safe {
+        color: var(--ok);
+      }
+
+      .result-unsafe {
+        color: var(--danger);
+      }
+
+      .hydrology-table {
+        width: 100%;
+        margin-top: 12px;
+        font-size: 15px;
+        border-collapse: collapse;
+      }
+
+      .hydrology-table th,
+      .hydrology-table td {
+        text-align: left;
+        padding: 8px 4px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .metric-card {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 18px;
+        height: 100%;
+        background: var(--surface);
+      }
+
+      .metric-title {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .metric-value {
+        color: var(--text-main);
+        font-size: 34px;
+        font-weight: 800;
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 768px) {
+        .predict-shell {
+          padding: 18px;
+        }
+
+        .predict-form select,
+        .predict-btn {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -118,8 +219,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="plots.html">Plots</a></li>
             <li><a href="heatmaps.html">Heatmaps</a></li>
-            <li><a href="satellite.html">Satellite</a></li>
             <li class="active"><a href="predicts.html">Predict</a></li>
+            <li class="theme-toggle-item"><button type="button" class="theme-toggle-btn js-theme-toggle">B/W</button></li>
           </ul>
         </nav>
         <!-- .main-nav -->
@@ -135,28 +236,24 @@
       <section id="services" class="section-bg">
         <div class="container">
           <header class="section-header">
-            <h3>Select City!</h3>
-
-            <p>
-              Select a city name to get information about it!
+            <h3 class="predict-title">Flood Risk Predictor</h3>
+            <p class="predict-subtitle">
+              Select a city and run real-time weather + hydrology risk scoring.
             </p>
           </header>
 
           <div class="row">
-            <div class="col-lg-12" align="center">
-              <form class="form-inline" method="POST" action="predicts.html" style="display: inline-block;">
-                <div class="form-group">
-                  <div class="input-group">
-                    <!-- <select name="place" class="selectpicker form-control" style="width:150px;">
+            <div class="col-lg-12">
+              <div class="predict-shell">
+                <form class="predict-form" method="POST" action="predicts.html">
+                    <select name="city" class="selectpicker form-control">
                       {% for item in cities %}
                       <option value="{{ item.name }}" {{ item.sel }}>{{ item.name }}</option>
                       {% endfor %}
-                    </select> -->
-                    <input type="text" name="city" placeholder="Enter a city"></input>
-                  </div>
-                  <button type="submit" class="btn btn-default" style="margin-left:15px;height:50px;background-color:#1bb1dc;color:white;">Go</button>
-                </div>
-              </form>
+                    </select>
+                  <button type="submit" class="predict-btn">Run Prediction</button>
+                </form>
+              </div>
             </div>
         </div>
       </section>
@@ -177,7 +274,7 @@
               class="col-md-12 col-lg-12 wow bounceInUp"
               data-wow-duration="1.4s"
             >
-              <div class="box">
+              <div class="result-card">
                 <div class="icon" style="background: #fceef3;">
                   <i
                     class="ion-ios-analytics-outline"
@@ -186,49 +283,74 @@
                 </div>
                 <h4>Flood Prediction</h4>
                 {% if pred == "Safe" %}
-                <h4 style="font-weight: 900;font-size: 40px;color:#41cf2e;">Safe</h4>
+                <h4 class="result-label result-safe">Safe</h4>
                   <h6 style="font-weight: 400;font-size: 20px;">According to our ML model, we did not detect any signs of a potential flood.</h6>
                 {% endif %}
 
                 {% if pred == "Unsafe" %}
-                <h4 style="font-weight: 900;font-size: 40px;color:#FF002e;">Unsafe</h4>
-                  <h6 style="font-weight: 400;font-size: 20px;">According to our ML model, this area has potential risk of flooding within the next 15 days. Please take emergency measures.</h6>
+                <h4 class="result-label result-unsafe">Unsafe</h4>
+                  <h6 style="font-weight: 400;font-size: 20px;">According to our ML model, this area has potential risk of flooding within the next {{ horizon_days }} days. Please take emergency measures.</h6>
                 {% endif %}
-                
+
+                {% if risk_pct is not none %}
+                <h6 style="font-weight: 500;font-size: 18px; margin-top: 15px;">Estimated flood risk: <b>{{ risk_pct }}%</b></h6>
+                <h6 style="font-weight: 400;font-size: 16px;">Decision threshold: {{ threshold_pct }}% (Unsafe if risk is above threshold)</h6>
+                {% endif %}
+
+                {% if hydrology_data %}
+                  <hr />
+                  <h5 style="font-weight: 700; margin-top: 18px;">Hydrology Model (Basin)</h5>
+                  {% if hydrology_data.city %}
+                    <h6 style="font-weight: 400;font-size: 15px;">City: {{ hydrology_data.city }}</h6>
+                  {% endif %}
+                  {% if hydrology_data.basin_id %}
+                    <h6 style="font-weight: 400;font-size: 15px;">Basin: {{ hydrology_data.basin_id }}</h6>
+                  {% endif %}
+                  {% if hydrology_data.error %}
+                    <h6 style="font-weight: 400;font-size: 15px;color:#FF002e;">{{ hydrology_data.error }}</h6>
+                  {% endif %}
+                  {% if hydrology_data.predictions %}
+                    <table class="hydrology-table">
+                      <thead>
+                        <tr>
+                          <th>Lead</th>
+                          <th>Risk</th>
+                          <th>Threshold</th>
+                          <th>Alert</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for item in hydrology_data.predictions %}
+                        <tr>
+                          <td>{{ item.lead_hours }}h</td>
+                          <td>{{ (item.risk_probability * 100)|round(2) }}%</td>
+                          <td>{{ (item.threshold * 100)|round(2) }}%</td>
+                          <td style="font-weight:700; color: {% if item.alert == 'UNSAFE' %}#FF002e{% else %}#41cf2e{% endif %};">{{ item.alert }}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  {% endif %}
+                {% endif %}
+
               </div>
             </div>
             <div
               class="col-md-6 col-lg-4 wow fadeIn"
               data-wow-duration="1.4s"
             >
-              <div class="box">
-                <div class="icon" style="background: #fceef3;">
-                  <i
-                    class="ion-ios-analytics-outline"
-                    style="color: #ff689b;"
-                  ></i>
-                </div>
-                <h4>Temperature (F)</h4>
-                <h4 style="font-weight: 900;font-size: 40px;">{{temp}}</h4>
-                <!-- <p class="description">
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi sint occaecati cupiditate non provident
-                </p> -->
+              <div class="metric-card">
+                <h4 class="metric-title">Temperature (F)</h4>
+                <h4 class="metric-value">{{ temp }}</h4>
               </div>
             </div>
             <div
               class="col-md-6 col-lg-4 wow fadeIn"
               data-wow-duration="1.4s"
             >
-              <div class="box">
-                <div class="icon" style="background: #fff0da;">
-                  <i
-                    class="ion-ios-bookmarks-outline"
-                    style="color: #e98e06;"
-                  ></i>
-                </div>
-                <h4>Max Temperature (F)</h4>
-                <h4 style="font-weight: 900;font-size: 40px;">{{maxt}}</h4>
+              <div class="metric-card">
+                <h4 class="metric-title">Max Temperature (F)</h4>
+                <h4 class="metric-value">{{ maxt }}</h4>
               </div>
             </div>
 
@@ -237,12 +359,9 @@
               data-wow-delay="0.1s"
               data-wow-duration="1.4s"
             >
-              <div class="box">
-                <div class="icon" style="background: #e6fdfc;">
-                  <i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i>
-                </div>
-                <h4>Windspeed (mph)</h4>
-                <h4 style="font-weight: 900;font-size: 40px;">{{wspd}}</h4>
+              <div class="metric-card">
+                <h4 class="metric-title">Windspeed (mph)</h4>
+                <h4 class="metric-value">{{ wspd }}</h4>
               </div>
             </div>
             <div
@@ -250,15 +369,9 @@
               data-wow-delay="0.1s"
               data-wow-duration="1.4s"
             >
-              <div class="box">
-                <div class="icon" style="background: #eafde7;">
-                  <i
-                    class="ion-ios-speedometer-outline"
-                    style="color: #41cf2e;"
-                  ></i>
-                </div>
-                <h4>Cloud Cover (%)</h4>
-                <h4 style="font-weight: 900;font-size: 40px;">{{ cloudcover }}</h4>
+              <div class="metric-card">
+                <h4 class="metric-title">Cloud Cover (%)</h4>
+                <h4 class="metric-value">{{ cloudcover }}</h4>
               </div>
             </div>
 
@@ -267,12 +380,9 @@
               data-wow-delay="0.2s"
               data-wow-duration="1.4s"
             >
-              <div class="box">
-                <div class="icon" style="background: #e1eeff;">
-                  <i class="ion-ios-world-outline" style="color: #2282ff;"></i>
-                </div>
-                <h4>Precipitation (mm)</h4>
-                <h4 style="font-weight: 900;font-size: 40px;">{{ percip }}</h4>
+              <div class="metric-card">
+                <h4 class="metric-title">Precipitation (mm)</h4>
+                <h4 class="metric-value">{{ percip }}</h4>
               </div>
             </div>
             <div
@@ -280,12 +390,9 @@
               data-wow-delay="0.2s"
               data-wow-duration="1.4s"
             >
-              <div class="box">
-                <div class="icon" style="background: #ecebff;">
-                  <i class="ion-ios-clock-outline" style="color: #8660fe;"></i>
-                </div>
-                <h4>Humidity (%)</h4>
-                <h4 style="font-weight: 900;font-size: 40px;">{{ humidity }}</h4>
+              <div class="metric-card">
+                <h4 class="metric-title">Humidity (%)</h4>
+                <h4 class="metric-value">{{ humidity }}</h4>
               </div>
             </div>
           </div>
@@ -438,3 +545,5 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>
+
+

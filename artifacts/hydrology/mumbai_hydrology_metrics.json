@@ -1,0 +1,128 @@
+{
+  "24": {
+    "selected_model": "logistic",
+    "validation_auc": 0.9960753532182104,
+    "test_metrics": {
+      "threshold": 0.31999999999999995,
+      "accuracy": 0.9809523809523809,
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.9333333333333333,
+      "roc_auc": 0.9960753532182103,
+      "pr_auc": 0.9745225013082156
+    },
+    "split_sizes": {
+      "train": 489,
+      "val": 105,
+      "test": 105
+    }
+  },
+  "48": {
+    "selected_model": "random_forest",
+    "validation_auc": 0.9984301412872841,
+    "test_metrics": {
+      "threshold": 0.21999999999999997,
+      "accuracy": 0.9619047619047619,
+      "precision": 0.8125,
+      "recall": 0.9285714285714286,
+      "f1": 0.8666666666666667,
+      "roc_auc": 0.9929356357927787,
+      "pr_auc": 0.9605300453514739
+    },
+    "split_sizes": {
+      "train": 488,
+      "val": 105,
+      "test": 105
+    }
+  },
+  "72": {
+    "selected_model": "random_forest",
+    "validation_auc": 0.9937205651491366,
+    "test_metrics": {
+      "threshold": 0.25999999999999995,
+      "accuracy": 0.9523809523809523,
+      "precision": 0.7647058823529411,
+      "recall": 0.9285714285714286,
+      "f1": 0.8387096774193549,
+      "roc_auc": 0.9827315541601256,
+      "pr_auc": 0.8712946600551643
+    },
+    "split_sizes": {
+      "train": 487,
+      "val": 105,
+      "test": 105
+    }
+  },
+  "96": {
+    "selected_model": "logistic",
+    "validation_auc": 0.9936507936507937,
+    "test_metrics": {
+      "threshold": 0.30999999999999994,
+      "accuracy": 0.9428571428571428,
+      "precision": 0.7222222222222222,
+      "recall": 0.9285714285714286,
+      "f1": 0.8125,
+      "roc_auc": 0.9843014128728415,
+      "pr_auc": 0.8651617075489255
+    },
+    "split_sizes": {
+      "train": 487,
+      "val": 104,
+      "test": 105
+    }
+  },
+  "120": {
+    "selected_model": "logistic",
+    "validation_auc": 0.9865079365079366,
+    "test_metrics": {
+      "threshold": 0.41999999999999993,
+      "accuracy": 0.9333333333333333,
+      "precision": 0.7333333333333333,
+      "recall": 0.7857142857142857,
+      "f1": 0.7586206896551724,
+      "roc_auc": 0.978021978021978,
+      "pr_auc": 0.8373265577640806
+    },
+    "split_sizes": {
+      "train": 486,
+      "val": 104,
+      "test": 105
+    }
+  },
+  "144": {
+    "selected_model": "logistic",
+    "validation_auc": 0.9682539682539683,
+    "test_metrics": {
+      "threshold": 0.41999999999999993,
+      "accuracy": 0.9238095238095239,
+      "precision": 0.7142857142857143,
+      "recall": 0.7142857142857143,
+      "f1": 0.7142857142857143,
+      "roc_auc": 0.9709576138147566,
+      "pr_auc": 0.8312387147014476
+    },
+    "split_sizes": {
+      "train": 485,
+      "val": 104,
+      "test": 105
+    }
+  },
+  "168": {
+    "selected_model": "logistic",
+    "validation_auc": 0.9563492063492063,
+    "test_metrics": {
+      "threshold": 0.3,
+      "accuracy": 0.9134615384615384,
+      "precision": 0.631578947368421,
+      "recall": 0.8571428571428571,
+      "f1": 0.7272727272727273,
+      "roc_auc": 0.9595238095238096,
+      "pr_auc": 0.7906416373359593
+    },
+    "split_sizes": {
+      "train": 485,
+      "val": 104,
+      "test": 104
+    }
+  }
+}

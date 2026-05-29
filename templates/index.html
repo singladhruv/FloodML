@@ -52,6 +52,18 @@
       href="{{ url_for('static', filename='css/style.css') }}"
       rel="stylesheet"
     />
+    <style>
+      #team .member {
+        height: 420px;
+        overflow: hidden;
+      }
+
+      #team .member img {
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+      }
+    </style>
   </head>
 
   <body>
@@ -90,8 +102,8 @@
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="plots.html">Plots</a></li>
             <li><a href="heatmaps.html">Heatmaps</a></li>
-            <li><a href="satellite.html">Satellite</a></li>
             <li><a href="predicts.html">Predict</a></li>
+            <li class="theme-toggle-item"><button type="button" class="theme-toggle-btn js-theme-toggle">B/W</button></li>
           </ul>
         </nav>
         <!-- .main-nav -->
@@ -240,9 +252,9 @@
                     style="color: #41cf2e;"
                   ></i>
                 </div>
-                <h4 class="title"><a href="satellite.html">Satellite Images</a></h4>
+                <h4 class="title"><a href="predicts.html">Hydrology Forecast</a></h4>
                 <p class="description">
-                  We analyzed data from NASA's GPM Project, and displayed georeferenced plots for sevaral cities.
+                  Run basin-aware flood risk scoring with lead-time alerts and hydrology feature insights.
                 </p>
               </div>
             </div>
@@ -343,11 +355,11 @@
                 />
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Nand Vinchhi</h4>
+                    <h4>Dhruv Singla</h4>
                     <span>Machine Learning and Data Visualization</span>
                     <div class="social">
                       <a
-                        href="https://www.linkedin.com/in/nand-vinchhi-06524a1ab/?originalSubdomain=in"
+                        href="https://www.linkedin.com/in/dhruvsingla82/"
                         ><i class="fa fa-linkedin"></i
                       ></a>
                     </div>
@@ -359,17 +371,17 @@
             <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
               <div class="member">
                 <img
-                  src="{{ url_for('static', filename='img/veer-square.jpg') }}"
+                  src="{{ url_for('static', filename='img/Sodhi_Sidak_Security.jpeg') }}"
                   class="img-fluid"
                   alt=""
                   width="500"
                 />
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Veer Gadodia</h4>
+                    <h4>Sidak Sodhi</h4>
                     <span>Machine Learning and Front-end</span>
                     <div class="social">
-                      <a href="https://www.linkedin.com/in/veergadodia/"
+                      <a href="https://www.linkedin.com/in/sidak-sodhi-527933277/"
                         ><i class="fa fa-linkedin"></i
                       ></a>
                     </div>
@@ -381,18 +393,18 @@
             <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
               <div class="member">
                 <img
-                  src="{{ url_for('static', filename='img/mihir-square.jpg') }}"
+                  src="{{ url_for('static', filename='img/ridham.jpeg') }}"
                   class="img-fluid"
                   alt=""
                   width="500"
                 />
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Mihir Kachroo</h4>
+                    <h4>Ridham Mahajan</h4>
                     <span>Data mining and Front-end</span>
                     <div class="social">
                       <a
-                        href="https://www.linkedin.com/in/mihir-kachroo/?originalSubdomain=ca"
+                        href="https://www.linkedin.com/in/ridham-mahajan-9a8a07271/"
                         ><i class="fa fa-linkedin"></i
                       ></a>
                     </div>
